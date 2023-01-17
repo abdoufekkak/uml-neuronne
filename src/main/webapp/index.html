@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Creation d'un Réseau Neurone</title>
+</head>
+<body>
+<h1 style="text-align: center;">Creation d'un Réseau Neurone</h1>
+<form action="apprenti" method="get">
+<div class="containt">
+    <label>Saisir le nom du Réseau :</label>
+    <input type="text"/><br>
+    <label>Choisir le type du Neurone :</label>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
+        <label class="form-check-label" for="inlineRadio1">Perceptron</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+        <label class="form-check-label" for="inlineRadio2">Perceptron Multi-Couches</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+        <label class="form-check-label" for="inlineRadio3">Hopfield</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+        <label class="form-check-label" for="inlineRadio3">Kohonen</label>
+      </div><br>
+      <p>* Les données d'Entrées :</p>
+    <div id="entree" style="border-style: solid;"><div id="matrix"></div></div>
+    
+    <p>* Les données de sortie :</p>
+    <div id="sortie" style="border-style: solid;"><div id="matrixS"></div></div>
+ 
+    <label>Choisir la fonction d'apprentissage :</label>
+    <select id="choix">
+        <option>Propagation arrière</option>
+        <option>Hopfield</option>
+        <option>Kohonen</option>
+    </select>
+    <p>Propriétés sur la     
+        <select id="couche">
+            <option>Couche 1</option>
+            <option>Couche 2</option>
+        </select>
+    </p><br>
+    <div class="couche">
+        <label>Nombre de neurones :</label>
+        <input type="number" min="0" max="10" id="neurone"/><br>
+        <label>Choisir la fonction de combinaison :</label>
+        <select id="fct-c">
+            <option>"ou" Logique</option>
+            <option>Min</option>
+            <option>Max</option>
+            <option>Moyenne</option>
+            <option>Somme</option>
+            <option>Produit</option>
+        </select><br>
+        <label>Choisir la fonction de transfert :</label>
+        <select id="fct-t">
+            <option>Sigmoide</option>
+            <option>Heaviside</option>
+            <option>Linear</option>
+        </select><br>
+    </div>
+    <div class="button">
+        <button type="submit" class="btn btn-success mb-2">Créer</button>
+    </div>
+</div>
+</form>
+</body>
+<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="script2.js"></script>
+<script type="text/javascript" src="scriptS.js"></script>
+<script type="text/javascript" src="script2S.js"></script>
+
+</html>
